@@ -4,11 +4,15 @@ Implementation of the classic dice game [Yahtzee](https://en.wikipedia.org/wiki/
 
 This is Assignment #5 of CS106A Programming Methodologies module by Stanford University. Have fun playing!
 
+<img src="readme_images/readme_intro.png" alt="A game of Yahtzee with 3 players"/>
+
 ## How to Play
 
 Yahtzee is a game for 1 to 4 players
 
 1. Each player takes turns rolling 5 dice with up to 3 rolls per turn to try to make configurations that match the 13 scoring categories
+<img src="readme_images/readme_reroll.png" alt="A player selects dice for reroll"/>
+
 2. A player will roll the dice 3 times. If a player doesn’t want to change anything on a subsequent roll, they should reroll without selecting any dice
 3. On their turn the player must select a category to score points with their dice configuration
 4. If their meet the criteria for that category, they score points, otherwise they get 0 for that category
@@ -36,11 +40,13 @@ The scoreboard consists of:
 - An upper bonus - a player is awarded a 35-point bonus if their upper section totals 63 or more
 - A lower score - totalling the scores for Three of a Kind to Chance
 - The total score - totalling the upper score, the upper bonus and the lower score to generate the final score
+<img src="readme_images/readme_final_score.png" alt="Final score of a game"/>
 
 ### Category Validation
 
 - When a player selects a scoring category, whether the dice configuration meets the category requirements is validated e.g. for Three of a Kind, checking that the dice configuration has three of the same number
 - A category can only be used once, which means that a player will sometimes have to choose a category that doesn’t match the configuration of the dice. In this case, the plays scores 0 in the selected category
+<img src="readme_images/readme_nil_point.png" alt="Players score 0 when there are no appropriate categories left"/>
 - If a player attempts to reuse a category, they will also score 0 in the selected category
 
 ## Programming Techniques
